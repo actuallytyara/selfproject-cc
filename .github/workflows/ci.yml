@@ -18,7 +18,7 @@ jobs:
       run: docker build -t actuallytyara/php-dtp:latest .
 
     - name: Login DockerHub
-      if: github.ref == 'main'
+      if: github.ref == 'refs/heads/main'
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
